@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Text.Json" Version="8.0.4" />
+    <PackageReference Include="Volo.Abp.AutoMapper" Version="8.2.1" />
+    <PackageReference Include="Volo.Abp.Ddd.Application" Version="8.2.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SampleOrdering.NotificationService.Application.Contracts\SampleOrdering.NotificationService.Application.Contracts.csproj" />
+    <ProjectReference Include="..\SampleOrdering.NotificationService.Domain\SampleOrdering.NotificationService.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

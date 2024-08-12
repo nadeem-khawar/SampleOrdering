@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\orderservice\SampleOrdering.OrderService.Domain.Shared\SampleOrdering.OrderService.Domain.Shared.csproj" />
+    <ProjectReference Include="..\SampleOrdering.NotificationService.Domain.Shared\SampleOrdering.NotificationService.Domain.Shared.csproj" />
+  </ItemGroup>
+
+</Project>

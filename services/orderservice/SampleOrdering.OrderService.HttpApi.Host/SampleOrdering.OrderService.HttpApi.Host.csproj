@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\shared\SampleOrdering.Shared.Hosting.Microservices\SampleOrdering.Shared.Hosting.Microservices.csproj" />
+    <ProjectReference Include="..\SampleOrdering.OrderService.Application\SampleOrdering.OrderService.Application.csproj" />
+    <ProjectReference Include="..\SampleOrdering.OrderService.EntityFrameworkCore\SampleOrdering.OrderService.EntityFrameworkCore.csproj" />
+    <ProjectReference Include="..\SampleOrdering.OrderService.HttpApi\SampleOrdering.OrderService.HttpApi.csproj" />
+  </ItemGroup>
+
+</Project>

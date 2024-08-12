@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SampleOrdering.Shared.Hosting.AspNetCore\SampleOrdering.Shared.Hosting.AspNetCore.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.7" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="8.0.7" />
+    <PackageReference Include="System.Text.Json" Version="8.0.4" />
+    <PackageReference Include="Volo.Abp.BackgroundJobs.RabbitMQ" Version="8.2.1" />
+    <PackageReference Include="Volo.Abp.EventBus.RabbitMQ" Version="8.2.1" />
+  </ItemGroup>
+
+</Project>

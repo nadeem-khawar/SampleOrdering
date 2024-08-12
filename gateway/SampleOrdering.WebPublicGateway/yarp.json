@@ -1,0 +1,58 @@
+{
+  "ReverseProxy": {
+    "Routes": {
+      "User Service": {
+        "ClusterId": "Users",
+        "Match": {
+          "Path": "/api/catalog/{**everything}"
+        }
+      },
+      "Catalog Service Swagger": {
+        "ClusterId": "Users",
+        "Match": {
+          "Path": "/swagger-json/Catalog/swagger/v1/swagger.json"
+        },
+        "Transforms": [
+          { "PathRemovePrefix": "/swagger-json/Catalog" }
+        ]
+      },
+      "Ordering Service": {
+        "ClusterId": "Ordering",
+        "Match": {
+          "Path": "/api/ordering/{**everything}"
+        }
+      },
+      "Ordering Service Swagger": {
+        "ClusterId": "Ordering",
+        "Match": {
+          "Path": "/swagger-json/Ordering/swagger/v1/swagger.json"
+        },
+        "Transforms": [
+          { "PathRemovePrefix": "/swagger-json/Ordering" }
+        ]
+      }
+    },
+    "Clusters": {
+      "Users": {
+        "Destinations": {
+          "destination1": {
+            "Address": "http://localhost:5076",
+            "MetaData": {
+              "PublicAddress": ""
+            }
+          }
+        }
+      },
+      "Ordering": {
+        "Destinations": {
+          "destination1": {
+            "Address": "http://localhost:5087",
+            "MetaData": {
+              "PublicAddress": ""
+            }
+          }
+        }
+      }
+    }
+  }
+}
